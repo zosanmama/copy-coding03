@@ -1,0 +1,72 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image:url(/img/FV.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    color: #6fa156; /* Text color to match the green logo */
+    position: relative;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .hero-logo {
+    width: 240px;
+    margin-top: 250px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #93c572;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.252);
+  }
+  
+  .scroll-text {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #f9f9f9;
+    margin-top: 30px;
+  }
+  
+  .arrow {
+    position: relative;
+    display: inline-block;
+    width: 4px;
+    height: 100px;
+    margin-left: 29px;
+    border-radius: 9999px;
+    background-color: #f9f9f9;
+  }
+  
+  .arrow::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 45px;
+    border-radius: 9999px;
+    background-color: #f9f9f9;
+    transform: rotate(45deg);
+    transform-origin: 50% calc(100% - 2px);
+  }
+  
