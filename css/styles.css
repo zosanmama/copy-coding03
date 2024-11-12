@@ -320,12 +320,15 @@ header {
     height: auto;
     justify-content: right;
   }
-  .circle-image01 img,
   .circle-image02 img,
-  .circle-image03 img,
   .circle-image04 img {
     width: 180px;
-    margin: 0;
+    margin-right: 10px;
+  }
+  .circle-image01 img,
+  .circle-image03 img {
+    width: 180px;
+    margin-left: 10px;
   }
 }
 
