@@ -182,89 +182,152 @@ header {
 /* ---------------------------------
               about
   ----------------------------------*/
-.about {
-  padding: 60px 20px;
-  height: 750px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #fff;
-  position: relative;
+  .about {
+    padding: 60px 20px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  /* About Text */
+  .about-text {
+    max-width: 800px;
+    margin-bottom: 40px;
+    position: absolute; 
+    top: 120px; 
+    width: 600px;
+    z-index: 1; 
+  }
+  
+  .about-logo {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  
+  .about-text p {
+    font-size: 14px;
+    justify-content: center;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Circle Images Section */
+  .about-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 200px;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    position: relative;
+    z-index: 0; 
+    margin-top: 0px;
+  }
+  
+  /* Circle Image Styling */
+  .circle-image01 {
+    width: 400px;
+    height: 320px;
+    overflow: visible;
+    display: flex;
+    align-items:start;
+    justify-content: left;
+  }
+  .circle-image02 {
+    width: 400px;
+    height: 320px;
+    overflow: visible;
+    display: flex;
+    align-items: start;
+    justify-content: right;
+  }
+  .circle-image03 {
+    width: 400px;
+    height: 320px;
+    overflow: visible;
+    display: flex;
+    align-items: start;
+    justify-content: right;
+  }
+  .circle-image04 {
+    width: 400px;
+    height: 320px;
+    overflow: visible;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+  }
+  .circle-image01 img {
+    width: 180px;
+  }
+  .circle-image02 img {
+    width: 180px;
+    margin-top: 20px;
+  }
+  .circle-image03 img {
+    width: 230px;
+    margin-top: 30px;
+    margin-right: 10px;
+  }
+  .circle-image04 img {
+    width: 270px;
+    margin-left: 30px;
+  }
+  
+
+/* フェードインアニメーション定義 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* 少し下から上がるように設定 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* About Text */
-.about-text {
-  max-width: 800px;
-  margin-bottom: 40px;
-  position: absolute; 
-  top: 120px; 
-  width: 600px;
-  z-index: 1; 
-}
-
-.about-logo {
+/* Circle Image Styling with Fade-In */
+.circle-image01, .circle-image02, .circle-image03, .circle-image04 {
   width: 400px;
-  margin-bottom: 30px;
-}
-
-.about-text p {
-  font-size: 14px;
-  justify-content: center;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Circle Images Section */
-.about-images {
+  height: 320px;
+  overflow: visible;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  row-gap: 20px;
-  column-gap: 200px;
-  width: 100%;
-  height: 100%;
-  max-width: 1000px;
-  position: relative;
-  z-index: 0; 
-  margin-top: 0px;
+  align-items: start;
+  opacity: 0; /* 初期状態は非表示 */
+  animation: fadeIn 2.5s forwards; /* フェードインアニメーションを1秒かけて適用 */
 }
 
-/* Circle Image Styling */
+/* 各イメージのディレイ設定 */
 .circle-image01 {
-  width: 400px;
-  height: 320px;
-  overflow: visible;
-  display: flex;
-  align-items:start;
   justify-content: left;
+  animation-delay: 0.5s; /* 最初に表示 */
 }
+
 .circle-image02 {
-  width: 400px;
-  height: 320px;
-  overflow: visible;
-  display: flex;
-  align-items: start;
   justify-content: right;
+  animation-delay: 2.0s; /* 0.5秒後に表示 */
 }
+
 .circle-image03 {
-  width: 400px;
-  height: 320px;
-  overflow: visible;
-  display: flex;
-  align-items: start;
   justify-content: right;
+  animation-delay: 4.0s; /* 1秒後に表示 */
 }
+
 .circle-image04 {
-  width: 400px;
-  height: 320px;
-  overflow: visible;
-  display: flex;
-  align-items: start;
   justify-content: left;
+  animation-delay: 6.0s; /* 1.5秒後に表示 */
 }
+
+/* 各イメージ内の画像サイズ・位置 */
 .circle-image01 img {
   width: 180px;
 }
@@ -281,6 +344,19 @@ header {
   width: 270px;
   margin-left: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsive Design */
