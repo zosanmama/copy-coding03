@@ -221,8 +221,8 @@ header {
 /* Circle Images Section */
 .about-images {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 200px;
@@ -285,7 +285,67 @@ header {
 }
 
 
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .about-text {
+    position: absolute;
+    top: 300px; 
+    width: 100%;
+    height: 400px;
+    z-index: 1; 
+  }
 
+  .about-logo {
+    width: 80%;
+  }
+
+  .about-images {
+    position: absolute;
+    top: 0px;
+    flex-direction: row;
+    row-gap: 400px;
+    column-gap: 0;
+    z-index: 0; 
+    padding: none;
+  }
+
+  .circle-image01, .circle-image03 {
+    width: 50%;
+    height: auto;
+    justify-content: left;
+    margin-left: none;
+  }
+ .circle-image02, .circle-image04 {
+    width: 50%;
+    height: auto;
+    justify-content: right;
+  }
+  .circle-image01 img,
+  .circle-image02 img,
+  .circle-image03 img,
+  .circle-image04 img {
+    width: 180px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .about-logo {
+    width: 70%;
+  }
+
+  .circle-image01 img,
+  .circle-image02 img,
+  .circle-image03 img,
+  .circle-image04 img {
+    width: 100px;
+  }
+}
 
 
 
