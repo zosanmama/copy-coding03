@@ -326,8 +326,8 @@ header {
 
 .circle-image01.circle-fade-in { animation-delay: 0.5s; }
 .circle-image02.circle-fade-in { animation-delay: 1s; }
-.circle-image03.circle-fade-in { animation-delay: 1.5s; }
-.circle-image04.circle-fade-in { animation-delay: 2s; }
+.circle-image03.circle-fade-in { animation-delay: 1s; }
+.circle-image04.circle-fade-in { animation-delay: 1.5s; }
 
 /* fade-out animation is the same class as .fade-out in fv */
 
@@ -398,7 +398,7 @@ header {
 
 
   /* ---------------------------------
-              intro
+              works
   ----------------------------------*/
 
 
