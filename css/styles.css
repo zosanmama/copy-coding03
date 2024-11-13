@@ -95,14 +95,14 @@ header {
   }
   
   .fv-logo {
-    width: 240px;
-    margin-top: 200px;
+    width: 200px;
+    margin-top: 120px;
   }
   
   .fv h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    letter-spacing: 15px;
+    letter-spacing: 12px;
     margin-bottom: 20px;
     color: #93c572;
     text-shadow: 2px 2px 4px rgba(60, 62, 60, 0.944);
@@ -113,7 +113,7 @@ header {
     font-size: 1rem;
     font-weight: 900;
     color: #f9f9f9;
-    margin-top: 120px;
+    margin-top: 80px;
     animation: bounce 2s infinite;
   }
   
@@ -290,7 +290,7 @@ header {
     margin-top: 20px;
   }
   .circle-image03 img {
-    width: 230px;
+    width: 180px;
     margin-top: 30px;
     margin-right: 10px;
   }
@@ -325,7 +325,7 @@ header {
 
 .circle-image01.circle-fade-in { animation-delay: 0.5s; }
 .circle-image02.circle-fade-in { animation-delay: 1s; }
-.circle-image03.circle-fade-in { animation-delay: 1s; }
+.circle-image03.circle-fade-in { animation-delay: 0.5s; }
 .circle-image04.circle-fade-in { animation-delay: 1.5s; }
 
 /* fade-out animation is the same class as .fade-out in fv */
