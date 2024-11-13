@@ -62,7 +62,78 @@
         </div>
     </div>
   </section>
-
+  <!-- works section -->
+   <section class="works">
+    <h1>活動紹介</h1>
+    <div id="works-button">
+        <button onclick="showTab('farm')">農園</button>
+        <button onclick="showTab('ranch')">牧場</button>        
+        <button onclick="showTab('ec')">オンライン販売</button>
+    </div>
+    <div id="farm" class="tab-content">
+      <p>
+        私たちは、「持続可能な農業」を掲げて、自然の恵みに感謝しながら、農作物を育てています。<br>
+        無農薬で、体にも環境にも優しく、季節ごとに異なる品種を育て、提供しています。<br>
+        ぜひ一度、農園にお越し頂き、自分の手で収穫した新鮮な野菜、果物をお召し上がりください。<br>
+      </p>
+      <div class="image-slider">
+        <div class="slide">
+          <img src="/img/work-nouen01.png" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="/img/work-nouen02.png" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="/img/work-nouen03.png" alt="Image 3">
+        </div>
+        <div class="slide">
+          <img src="/img/work-nouen04.png" alt="Image 4">
+        </div>
+      </div>
+    </div>
+    <div id="ranch" class="tab-content" style="display:none;">
+      <p>
+        私たちの牧場は、 自然と動物との共存を尊重し、持続可能な農業の原則に基づいて運営されています。<br>
+        広々とした環境で、動物たちとのふれ合いを通じて、 自然の恵みと動物の尊さを感じ、<br>
+        心温まるひとときを過ごしていただけます。<br>
+      </p>
+      <div class="image-slider">
+        <div class="slide">
+          <img src="/img/work-bokujo01.png" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="/img/work-bokujo02.png" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="/img/work-bokujo03.png" alt="Image 3">
+        </div>
+        <div class="slide">
+          <img src="/img/work-bokujo04.png" alt="Image 4">
+        </div>
+      </div>
+    </div>
+    <div id="ec" class="tab-content" style="display:none;">
+      <p>
+        自然の恵み農園から直接お届けする、 新鮮で美味しい農産物と<br>
+        手作りのジャムやバターなどの加工品を提供しています。<br>
+        自然の恩恵をご自宅でお楽しみいただけます。
+      </p>
+      <div class="image-slider">
+        <div class="slide">
+          <img src="/img/work-ec01.png" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="/img/work-ec02.png" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="/img/work-ec03.png" alt="Image 3">
+        </div>
+        <div class="slide">
+          <img src="/img/work-ec04.png" alt="Image 4">
+        </div>
+      </div>
+    </div>
+   </section>
 
 
   <script>
@@ -97,5 +168,26 @@
       handleScroll();
     });
   </script>
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
+  <script>
+    let currentIndex = 0;
+
+    function slideImages() {
+      const slides = document.querySelectorAll('.slide');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+      });
+    }
+
+    setInterval(slideImages, 3000); // 3秒ごとにスライド
+  </script>
+
 </body>
 </html>
