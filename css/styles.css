@@ -202,7 +202,6 @@ header {
   ----------------------------------*/
   .about {
     padding: 60px 20px;
-    height: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -397,35 +396,80 @@ header {
 }
 
 
-  /* ---------------------------------
-              works
-  ----------------------------------*/
-  .works {
-    margin-left: -50px; /* 左にはみ出す */
-    padding: 60px 20px; /* 上下の余白調整 */
-    background-color: #fff;
-    overflow: hidden; /* はみ出し部分の隠し */
-    position: relative;
-  }
-
-  .tab-menu button {
-  /* ボタンのデザイン調整 */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 15px;
-  margin: 5px;
-  font-size: 1em;
+/* ---------------------------------
+            works
+----------------------------------*/
+.works {
+  margin-left: -50px; /*左にはみ出す */
+  padding: 60px 20px; /* 上下の余白調整 */
+  padding-right: 0px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  background-color: #fff;
+  overflow: hidden; /* はみ出し部分の隠し */
+  position:relative;
+  height: 580px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 2px #9a9898;
 }
 
-.image-slider {
+.works h1 {
+  margin-top: 0px;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  color: #555555;
+  background-image: url(/img/title-line.svg);
+  background-size: 15%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.works p {
+color:#555555;
+font-size: small;
+margin-top: 30px;
+margin-left: 10%;
+}
+
+.works-button {
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-bottom: 10px;
   display: flex;
-  overflow: hidden;
-  width: 100%;
 }
 
-.slide {
-  min-width: 100%;
-  transition: transform 0.5s ease;
+.works-button button {
+  justify-content: center;
+  align-items: left;
+  width: 200px;
+  margin-right: 20px;
+  padding: .9em 2em;
+  border: none;
+  box-shadow: 1px 1px 2px #93c572;
+  border-radius: 15px;
+  background-color: #83c365;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  transition: .5s ease;
+}
+
+.works-button button:hover {
+  transform: translateY(-3px);
+}
+
+/* 自動スライダー */
+.slider{
+  width:100%;
+  margin-top: 50px;
+  margin-right: 0px;
+}
+.slider img {
+  width: 90%;
+}
+.slider .slick-slide{
+  height:auto;
 }
 
   /* ---------------------------------

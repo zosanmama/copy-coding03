@@ -6,6 +6,8 @@
   <meta name="description" content="⾃然の恵み農園は、農園運営・牧場運営・オンライン販売を通じ、⾃然の恵みを感じて、豊かな未来を想像して頂ける取り組みを⾏なっています。">
   <title>⾃然の恵み農園 | ⾃然の恵みを感じ、豊かな未来をつくる</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 </head>
 
 <body>
@@ -65,7 +67,7 @@
   <!-- works section -->
    <section class="works">
     <h1>活動紹介</h1>
-    <div id="works-button">
+    <div class="works-button">
         <button onclick="showTab('farm')">農園</button>
         <button onclick="showTab('ranch')">牧場</button>        
         <button onclick="showTab('ec')">オンライン販売</button>
@@ -76,19 +78,15 @@
         無農薬で、体にも環境にも優しく、季節ごとに異なる品種を育て、提供しています。<br>
         ぜひ一度、農園にお越し頂き、自分の手で収穫した新鮮な野菜、果物をお召し上がりください。<br>
       </p>
-      <div class="image-slider">
-        <div class="slide">
-          <img src="/img/work-nouen01.png" alt="Image 1">
-        </div>
-        <div class="slide">
-          <img src="/img/work-nouen02.png" alt="Image 2">
-        </div>
-        <div class="slide">
-          <img src="/img/work-nouen03.png" alt="Image 3">
-        </div>
-        <div class="slide">
-          <img src="/img/work-nouen04.png" alt="Image 4">
-        </div>
+      <div class="slider">
+        <div class="slide"><img src="/img/work-nouen01.png" alt="Image 1"></div>
+        <div class="slide"><img src="/img/work-nouen02.png" alt="Image 2"></div>
+        <div class="slide"><img src="/img/work-nouen03.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/work-nouen04.png" alt="Image 4"></div>
+        <div class="slide"><img src="/img/work-nouen01.png" alt="Image 1"></div>
+        <div class="slide"><img src="/img/work-nouen02.png" alt="Image 2"></div>
+        <div class="slide"><img src="/img/work-nouen03.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/work-nouen04.png" alt="Image 4"></div>
       </div>
     </div>
     <div id="ranch" class="tab-content" style="display:none;">
@@ -97,19 +95,15 @@
         広々とした環境で、動物たちとのふれ合いを通じて、 自然の恵みと動物の尊さを感じ、<br>
         心温まるひとときを過ごしていただけます。<br>
       </p>
-      <div class="image-slider">
-        <div class="slide">
-          <img src="/img/work-bokujo01.png" alt="Image 1">
-        </div>
-        <div class="slide">
-          <img src="/img/work-bokujo02.png" alt="Image 2">
-        </div>
-        <div class="slide">
-          <img src="/img/work-bokujo03.png" alt="Image 3">
-        </div>
-        <div class="slide">
-          <img src="/img/work-bokujo04.png" alt="Image 4">
-        </div>
+      <div class="slider">
+        <div class="slide"><img src="/img/work-bokujo01.png" alt="Image 1"></div>
+        <div class="slide"><img src="/img/work-bokujo02.png" alt="Image 2"></div>
+        <div class="slide"><img src="/img/work-bokujo03.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/work-bokujo04.png" alt="Image 4"></div>
+        <div class="slide"><img src="/img/work-bokujo01.png" alt="Image 1"></div>
+        <div class="slide"><img src="/img/work-bokujo02.png" alt="Image 2"></div>
+        <div class="slide"><img src="/img/work-bokujo03.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/work-bokujo04.png" alt="Image 4"></div>
       </div>
     </div>
     <div id="ec" class="tab-content" style="display:none;">
@@ -118,25 +112,23 @@
         手作りのジャムやバターなどの加工品を提供しています。<br>
         自然の恩恵をご自宅でお楽しみいただけます。
       </p>
-      <div class="image-slider">
-        <div class="slide">
-          <img src="/img/work-ec01.png" alt="Image 1">
-        </div>
-        <div class="slide">
-          <img src="/img/work-ec02.png" alt="Image 2">
-        </div>
-        <div class="slide">
-          <img src="/img/work-ec03.png" alt="Image 3">
-        </div>
-        <div class="slide">
-          <img src="/img/work-ec04.png" alt="Image 4">
-        </div>
+      <div class="slider">
+        <div class="slide"><img src="/img/work-ec01.png" alt="Image 1"></div>
+        <div class="slide"><img src="/img/work-ec02.png" alt="Image 2"></div>
+        <div class="slide"><img src="/img/work-ec03.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/work-ec04.png" alt="Image 4"></div>
+        <div class="slide"><img src="/img/work-ec01.png" alt="Image 1"></div>
+        <div class="slide"><img src="/img/work-ec02.png" alt="Image 2"></div>
+        <div class="slide"><img src="/img/work-ec03.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/work-ec04.png" alt="Image 4"></div>
       </div>
     </div>
    </section>
 
 
-  <script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script> //fvのお知らせとaboutの4つの画像のフェードイン//
     document.addEventListener("DOMContentLoaded", function () {
       const fvSection = document.querySelector(".fv"); // fvセクション
       const fvNews = document.querySelector(".fv-news"); // fv-news要素
@@ -168,7 +160,7 @@
       handleScroll();
     });
   </script>
-  <script>
+  <script> //worksセクションのタブ切り替え//
     function showTab(tabId) {
       const contents = document.querySelectorAll('.tab-content');
       contents.forEach(content => content.style.display = 'none');
@@ -176,18 +168,15 @@
     }
   </script>
   <script>
-    let currentIndex = 0;
-
-    function slideImages() {
-      const slides = document.querySelectorAll('.slide');
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(-${currentIndex * 100}%)`;
-      });
-    }
-
-    setInterval(slideImages, 3000); // 3秒ごとにスライド
+        $('.slider').slick({
+        autoplay: true,         //自動再生
+        autoplaySpeed: 0,       //自動再生のスピード
+        speed: 4000,            //スライドスピード
+        slidesToShow: 4,        //スライドの表示枚数
+        cssEase: "linear",      //スライドの動きを等速に
+        pauseOnHover: false,    //ホバーしても止まらないように
+        pauseOnFocus: false,    //フォーカスしても止まらないように
+        });
   </script>
-
 </body>
 </html>
