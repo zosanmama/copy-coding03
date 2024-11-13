@@ -108,7 +108,7 @@ header {
     text-shadow: 2px 2px 4px rgba(60, 62, 60, 0.944);
   }
   
-    /* スクロールアイコン (テキストと下向き矢印) */
+    /* scroll icon (text and downward arrow)  */
   .scroll-text {
     font-size: 1rem;
     font-weight: 900;
@@ -121,7 +121,7 @@ header {
     position: relative;
     display: inline-block;
     width: 2px;
-    height: 80px;
+    height: 60px;
     margin-top: 10px;
     margin-left: 9px;
     border-radius: 9999px;
@@ -162,7 +162,23 @@ header {
     padding: 20px;
     border-radius: 10px;
     width: 400px;
+    opacity: 0;
+    transform: translateY(20px);
+    /*transition: opacity 1s ease, transform 1s ease;*/
   }
+
+/* フェードイン */
+.fv-fade-in {
+  /* opacity: 1;
+  transform: translateY(0);*/
+  animation: fadeIn 0.8s forwards;
+}
+
+/* フェードアウト */
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
 
 
 .fv-news h3 {
@@ -177,6 +193,8 @@ header {
     text-align: left;
     margin-bottom: 5px;
 }
+
+
 
 
 /* ---------------------------------
@@ -278,12 +296,12 @@ header {
     margin-right: 10px;
   }
   .circle-image04 img {
-    width: 270px;
+    width: 240px;
     margin-left: 30px;
   }
   
 
-/* フェードインアニメーション */
+/* fade-in animation  */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -295,35 +313,23 @@ header {
   }
 }
 
+/* default setting before animation starts */
 .circle-image01, .circle-image02, .circle-image03, .circle-image04 {
-  opacity: 0; /* 初期状態で非表示 */
-  transform: translateY(20px); /* 初期位置 */
+  opacity: 0; 
+  transform: translateY(20px); 
 }
 
-/* アニメーションを開始するクラス */
-.fade-in {
-  animation: fadeIn 1s forwards;
+/* start animation  */
+.circle-fade-in {
+  animation: fadeIn 0.8s forwards;
 }
 
-.circle-image01.fade-in { animation-delay: 0.5s; }
-.circle-image02.fade-in { animation-delay: 1s; }
-.circle-image03.fade-in { animation-delay: 1.5s; }
-.circle-image04.fade-in { animation-delay: 2s; }
+.circle-image01.circle-fade-in { animation-delay: 0.5s; }
+.circle-image02.circle-fade-in { animation-delay: 1s; }
+.circle-image03.circle-fade-in { animation-delay: 1.5s; }
+.circle-image04.circle-fade-in { animation-delay: 2s; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* fade-out animation is the same class as .fade-out in fv */
 
 /* Responsive Design */
 @media (max-width: 1000px) {
@@ -389,12 +395,6 @@ header {
     width: 100px;
   }
 }
-
-
-
-
-
-
 
 
   /* ---------------------------------
