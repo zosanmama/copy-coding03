@@ -62,5 +62,24 @@
         </div>
     </div>
   </section>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".circle-image01, .circle-image02, .circle-image03, .circle-image04");
+  
+    function handleScroll() {
+      fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add("fade-in"); // 表示範囲に入ったらクラスを追加
+        }
+      });
+    }
+  
+    // スクロール時と初期ロード時にチェック
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // 初期チェック
+  });
+  </script>
 </body>
 </html>

@@ -283,11 +283,11 @@ header {
   }
   
 
-/* フェードインアニメーション定義 */
+/* フェードインアニメーション */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* 少し下から上がるように設定 */
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -295,55 +295,21 @@ header {
   }
 }
 
-/* Circle Image Styling with Fade-In */
 .circle-image01, .circle-image02, .circle-image03, .circle-image04 {
-  width: 400px;
-  height: 320px;
-  overflow: visible;
-  display: flex;
-  align-items: start;
-  opacity: 0; /* 初期状態は非表示 */
-  animation: fadeIn 2.5s forwards; /* フェードインアニメーションを1秒かけて適用 */
+  opacity: 0; /* 初期状態で非表示 */
+  transform: translateY(20px); /* 初期位置 */
 }
 
-/* 各イメージのディレイ設定 */
-.circle-image01 {
-  justify-content: left;
-  animation-delay: 0.5s; /* 最初に表示 */
+/* アニメーションを開始するクラス */
+.fade-in {
+  animation: fadeIn 1s forwards;
 }
 
-.circle-image02 {
-  justify-content: right;
-  animation-delay: 2.0s; /* 0.5秒後に表示 */
-}
+.circle-image01.fade-in { animation-delay: 0.5s; }
+.circle-image02.fade-in { animation-delay: 1s; }
+.circle-image03.fade-in { animation-delay: 1.5s; }
+.circle-image04.fade-in { animation-delay: 2s; }
 
-.circle-image03 {
-  justify-content: right;
-  animation-delay: 4.0s; /* 1秒後に表示 */
-}
-
-.circle-image04 {
-  justify-content: left;
-  animation-delay: 6.0s; /* 1.5秒後に表示 */
-}
-
-/* 各イメージ内の画像サイズ・位置 */
-.circle-image01 img {
-  width: 180px;
-}
-.circle-image02 img {
-  width: 180px;
-  margin-top: 20px;
-}
-.circle-image03 img {
-  width: 230px;
-  margin-top: 30px;
-  margin-right: 10px;
-}
-.circle-image04 img {
-  width: 270px;
-  margin-left: 30px;
-}
 
 
 
