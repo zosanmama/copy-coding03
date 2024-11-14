@@ -410,7 +410,7 @@ header {
   background-color: #fff;
   overflow: hidden; /* はみ出し部分の隠し */
   position:relative;
-  height: 580px;
+  height: 650px;
   border-radius: 50px;
   box-shadow: 1px 1px 2px #9a9898;
 }
@@ -441,7 +441,7 @@ margin-left: 10%;
   display: flex;
 }
 
-.works-button button {
+.works-button button.active{
   justify-content: center;
   align-items: left;
   width: 200px;
@@ -452,6 +452,22 @@ margin-left: 10%;
   border-radius: 15px;
   background-color: #83c365;
   color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  transition: .5s ease;
+}
+
+.works-button button {
+  justify-content: center;
+  align-items: left;
+  width: 200px;
+  margin-right: 20px;
+  padding: .9em 2em;
+  border: none;
+  box-shadow: 1px 1px 2px #93c572;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #f7b560;
   font-weight: 600;
   font-size: 1em;
   transition: .5s ease;

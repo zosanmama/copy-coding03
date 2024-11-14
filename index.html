@@ -68,7 +68,7 @@
    <section class="works">
     <h1>活動紹介</h1>
     <div class="works-button">
-        <button onclick="showTab('farm')">農園</button>
+        <button class="active" onclick="showTab('farm')">農園</button>
         <button onclick="showTab('ranch')">牧場</button>        
         <button onclick="showTab('ec')">オンライン販売</button>
     </div>
@@ -83,11 +83,6 @@
         <div class="slide"><img src="/img/work-nouen02.png" alt="Image 2"></div>
         <div class="slide"><img src="/img/work-nouen03.png" alt="Image 3"></div>
         <div class="slide"><img src="/img/work-nouen04.png" alt="Image 4"></div>
-        <!--
-        <div class="slide"><img src="/img/work-nouen01.png" alt="Image 1"></div>
-        <div class="slide"><img src="/img/work-nouen02.png" alt="Image 2"></div>
-        <div class="slide"><img src="/img/work-nouen03.png" alt="Image 3"></div>
-        <div class="slide"><img src="/img/work-nouen04.png" alt="Image 4"></div>-->
       </div>
     </div>
     <div id="ranch" class="tab-content" style="display:none;">
@@ -101,11 +96,6 @@
         <div class="slide"><img src="/img/work-bokujo02.png" alt="Image 2"></div>
         <div class="slide"><img src="/img/work-bokujo03.png" alt="Image 3"></div>
         <div class="slide"><img src="/img/work-bokujo04.png" alt="Image 4"></div>
-        <!--
-        <div class="slide"><img src="/img/work-bokujo01.png" alt="Image 1"></div>
-        <div class="slide"><img src="/img/work-bokujo02.png" alt="Image 2"></div>
-        <div class="slide"><img src="/img/work-bokujo03.png" alt="Image 3"></div>
-        <div class="slide"><img src="/img/work-bokujo04.png" alt="Image 4"></div>-->
       </div>
     </div>
     <div id="ec" class="tab-content" style="display:none;">
@@ -119,11 +109,6 @@
         <div class="slide"><img src="/img/work-ec02.png" alt="Image 2"></div>
         <div class="slide"><img src="/img/work-ec03.png" alt="Image 3"></div>
         <div class="slide"><img src="/img/work-ec04.png" alt="Image 4"></div>
-        <!--
-        <div class="slide"><img src="/img/work-ec01.png" alt="Image 1"></div>
-        <div class="slide"><img src="/img/work-ec02.png" alt="Image 2"></div>
-        <div class="slide"><img src="/img/work-ec03.png" alt="Image 3"></div>
-        <div class="slide"><img src="/img/work-ec04.png" alt="Image 4"></div>-->
       </div>
     </div>
    </section>
@@ -163,12 +148,19 @@
       handleScroll();
     });
   </script>
-  <script> //worksセクションのタブ切り替え//
-    function showTab(tabId) {
-      const contents = document.querySelectorAll('.tab-content');
-      contents.forEach(content => content.style.display = 'none');
-      document.getElementById(tabId).style.display = 'block';
-    }
+  <script> //worksセクションのタブ切り替えとボタン色の変更//
+function showTab(tabId) {
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(content => content.style.display = 'none');
+  document.getElementById(tabId).style.display = 'block';
+
+  // ボタンのアクティブ状態をリセット
+  const buttons = document.querySelectorAll('.works-button button');
+  buttons.forEach(button => button.classList.remove('active'));
+
+  // クリックしたボタンにアクティブクラスを追加
+  document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+}
   </script>
   <script>
         $('.slider').slick({
