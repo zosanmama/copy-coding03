@@ -116,6 +116,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <!--
   <script> //fvのお知らせとaboutの4つの画像のフェードイン//
     document.addEventListener("DOMContentLoaded", function () {
       const fvSection = document.querySelector(".fv"); // fvセクション
@@ -147,6 +148,54 @@
       window.addEventListener("scroll", handleScroll);
       handleScroll();
     });
+  </script> -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fvSection = document.querySelector(".fv");
+  const fvNews = document.querySelector(".fv-news");
+
+  function handleScroll() {
+    const fvRect = fvSection.getBoundingClientRect();
+
+    // FVセクションが表示されている間はフェードイン
+    if (fvRect.top < window.innerHeight && fvRect.bottom > 0 && fvSection.scrollTop === 0) {
+      fvNews.classList.add("fv-fade-in");
+      fvNews.classList.remove("fade-out");
+    } else {
+      // FVセクションのスクロールが始まったらフェードアウト
+      fvNews.classList.remove("fv-fade-in");
+      fvNews.classList.add("fade-out");
+    }
+  }
+
+  // FVセクション内でのスクロールイベントを検出
+  fvSection.addEventListener("scroll", handleScroll);
+  // ページ全体のスクロールにも対応
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+});
+
+</script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".circle-image01, .circle-image02, .circle-image03, .circle-image04");
+
+  function handleCircleImagesVisibility() {
+    fadeElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add("circle-fade-in");
+      } else {
+        el.classList.remove("circle-fade-in");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", handleCircleImagesVisibility);
+  handleCircleImagesVisibility();
+});
+
   </script>
   <script> //worksセクションのタブ切り替えとボタン色の変更//
 function showTab(tabId) {
