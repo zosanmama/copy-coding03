@@ -112,105 +112,134 @@
       </div>
     </div>
    </section>
+  <!-- faq section -->
+  <section class="faq">
+    <h1>よくあるご質問</h1>
+    
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span>Q 農園の野菜や果物は有機栽培ですか？</span>
+        <span class="icon">＋</span>
+        <span class="bottom-left"></span>
+        <span class="bottom-right"></span>
+      </button>
+      <div class="faq-answer">
+        <p>A はい、私たちの農園では有機栽培の原則に従って野菜と果物を栽培しています。化学肥料や農薬を極力使用せず、土壌と作物の健康を第一に考えております。</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span>Q 農園での見学や体験ツアーは行っていますか？</span>
+        <span class="icon">＋</span>
+        <span class="bottom-left"></span>
+        <span class="bottom-right"></span>
+      </button>
+      <div class="faq-answer">
+        <p>A はい、  腹園での見学や体験ツアーを随時開催しています。<br>
+          腹場の日常や農作業を親しみやすく説明し、実際に農園での体験を楽しむことができます。
+        </p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span>Q オンラインで注文した農産物はどのように配送されますか？</span>
+        <span class="icon">＋</span>
+        <span class="bottom-left"></span>
+        <span class="bottom-right"></span>
+      </button>
+      <div class="faq-answer">
+        <p>A オンラインで注文いただいた農産物は、専用の梱包で新鮮さを保ったまま、指定された配送先にお届けします。</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span>Q 農園で提供される季節ごとの野菜や果物の品種は何ですか？</span>
+        <span class="icon">＋</span>
+        <span class="bottom-left"></span>
+        <span class="bottom-right"></span>
+      </button>
+      <div class="faq-answer">
+        <p>A 春にはイチゴ、夏にはトマトや茄子、秋にはカボチャやリンゴ、冬にはプロッコリーやみかんなど、季節に応じた野菜、 果物を提供、 収穫体験することができます。</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <!--
-  <script> //fvのお知らせとaboutの4つの画像のフェードイン//
+  <!-- fvのnewsbox のフェードイン/フェードアウト -->
+  <script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const fvSection = document.querySelector(".fv");
+    const fvNews = document.querySelector(".fv-news");
+
+    function handleScroll() {
+      const fvRect = fvSection.getBoundingClientRect();
+
+      // FVセクションが表示されている間はフェードイン
+      if (fvRect.top < window.innerHeight && fvRect.bottom > 0 && fvSection.scrollTop === 0) {
+        fvNews.classList.add("fv-fade-in");
+        fvNews.classList.remove("fade-out");
+      } else {
+        // FVセクションのスクロールが始まったらフェードアウト
+        fvNews.classList.remove("fv-fade-in");
+        fvNews.classList.add("fade-out");
+      }
+    }
+
+    // FVセクション内でのスクロールイベントを検出
+    fvSection.addEventListener("scroll", handleScroll);
+    // ページ全体のスクロールにも対応
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+  });
+  </script>
+  <!-- Aboutのマル画像のフェードイン -->
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const fvSection = document.querySelector(".fv"); // fvセクション
-      const fvNews = document.querySelector(".fv-news"); // fv-news要素
       const fadeElements = document.querySelectorAll(".circle-image01, .circle-image02, .circle-image03, .circle-image04");
 
-      function handleScroll() {
-        // fvセクションとfv-newsの処理
-        const fvRect = fvSection.getBoundingClientRect();
-        if (fvRect.top < window.innerHeight && fvRect.bottom > 0) {
-          fvNews.classList.add("fv-fade-in");
-          fvNews.classList.remove("fade-out");
-        } else {
-          fvNews.classList.remove("fv-fade-in");
-          fvNews.classList.add("fade-out");
-        }
-
-        // 各circle-imageの処理
+      function handleCircleImagesVisibility() {
         fadeElements.forEach((el) => {
           const rect = el.getBoundingClientRect();
           if (rect.top < window.innerHeight && rect.bottom > 0) {
-            el.classList.add("circle-fade-in"); // 表示範囲に入ったらクラスを追加
+            el.classList.add("circle-fade-in");
           } else {
-            el.classList.remove("circle-fade-in"); // 表示範囲外なら非表示に戻す
+            el.classList.remove("circle-fade-in");
           }
         });
       }
 
-      window.addEventListener("scroll", handleScroll);
-      handleScroll();
+      window.addEventListener("scroll", handleCircleImagesVisibility);
+      handleCircleImagesVisibility();
     });
-  </script> -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const fvSection = document.querySelector(".fv");
-  const fvNews = document.querySelector(".fv-news");
-
-  function handleScroll() {
-    const fvRect = fvSection.getBoundingClientRect();
-
-    // FVセクションが表示されている間はフェードイン
-    if (fvRect.top < window.innerHeight && fvRect.bottom > 0 && fvSection.scrollTop === 0) {
-      fvNews.classList.add("fv-fade-in");
-      fvNews.classList.remove("fade-out");
-    } else {
-      // FVセクションのスクロールが始まったらフェードアウト
-      fvNews.classList.remove("fv-fade-in");
-      fvNews.classList.add("fade-out");
-    }
-  }
-
-  // FVセクション内でのスクロールイベントを検出
-  fvSection.addEventListener("scroll", handleScroll);
-  // ページ全体のスクロールにも対応
-  window.addEventListener("scroll", handleScroll);
-  handleScroll();
-});
-
-</script>
-
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const fadeElements = document.querySelectorAll(".circle-image01, .circle-image02, .circle-image03, .circle-image04");
-
-  function handleCircleImagesVisibility() {
-    fadeElements.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        el.classList.add("circle-fade-in");
-      } else {
-        el.classList.remove("circle-fade-in");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", handleCircleImagesVisibility);
-  handleCircleImagesVisibility();
-});
-
   </script>
   <script> //worksセクションのタブ切り替えとボタン色の変更//
-function showTab(tabId) {
-  const contents = document.querySelectorAll('.tab-content');
-  contents.forEach(content => content.style.display = 'none');
-  document.getElementById(tabId).style.display = 'block';
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
 
-  // ボタンのアクティブ状態をリセット
-  const buttons = document.querySelectorAll('.works-button button');
-  buttons.forEach(button => button.classList.remove('active'));
+      // ボタンのアクティブ状態をリセット
+      const buttons = document.querySelectorAll('.works-button button');
+      buttons.forEach(button => button.classList.remove('active'));
 
-  // クリックしたボタンにアクティブクラスを追加
-  document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
-}
+      // クリックしたボタンにアクティブクラスを追加
+      document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+    }
   </script>
+  <!-- Worksの画像スライダー -->
   <script>
         $('.slider').slick({
         autoplay: true,         //自動再生
@@ -221,6 +250,23 @@ function showTab(tabId) {
         pauseOnHover: false,    //ホバーしても止まらないように
         pauseOnFocus: false,    //フォーカスしても止まらないように
         });
+  </script>
+  <!-- FAQ ＋クリックでの動作 -->
+  <script>
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains("active");
+
+      // すべてのFAQアイテムを閉じる
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      // クリックされたアイテムをトグル
+      if (!isActive) {
+        faqItem.classList.add("active");
+      }
+    }
   </script>
 </body>
 </html>

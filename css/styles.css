@@ -520,6 +520,173 @@ margin-left: 10%;
               faq
   ----------------------------------*/
 
+/* FAQセクションのスタイル */
+.faq {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6fa156;
+  text-decoration: underline;
+}
+
+.faq-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 100%; /* faq-item が親要素の幅に合わせる */
+  box-sizing: border-box; /* 幅の調整 */
+}
+
+
+/* 左上の角の枠線 */
+.faq-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* 親要素の50% */
+  height: 40px;
+  border-top: 2px solid #6fa156;
+  border-left: 2px solid #6fa156;
+  border-top-left-radius: 40px;
+}
+
+/* 右上の角の枠線 */
+.faq-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* 親要素の50% */
+  height: 40px;
+  border-top: 2px solid #6fa156;
+  border-right: 2px solid #6fa156;
+  border-top-right-radius: 40px;
+}
+
+/* 左下の角の枠線 */
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* 上半分と一致させる */
+  height: 40px;
+  border-bottom: 2px solid #6fa156;
+  border-left: 2px solid #6fa156;
+  border-bottom-left-radius: 40px;
+}
+
+/* 右下の角の枠線 */
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%; /* 上半分と一致させる */
+  height: 40px;
+  border-bottom: 2px solid #6fa156;
+  border-right: 2px solid #6fa156;
+  border-bottom-right-radius: 40px;
+}
+
+
+
+/* 各FAQアイテムのスタイル */
+/*
+.faq-item {
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 10px;
+  position: relative;
+}
+
+
+.faq-item::before, .faq-item::after {
+  content: '';
+	width: 100%;
+	height: 30px;
+  position: absolute;
+}
+
+.faq-item::before {
+  border-radius: 20px 20px 0px 0px ;
+  border-left: solid 2px #6fa156;
+  border-top: solid 2px #6fa156;
+  border-right: solid 2px #6fa156;
+  border-bottom: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.faq-item::after {
+  border-radius: 0px 0px 20px 20px ;
+  border-right: solid 2px #6fa156;
+  border-bottom: solid 2px #6fa156;
+  border-left: solid 2px #6fa156;
+  bottom: 0;
+  right: 0;
+}
+*/
+
+/* Q ボタンのスタイル */
+.faq-question {
+  width: 100%;
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6fa156;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question .icon {
+  font-size: 1.5rem;
+  color: #6fa156;
+}
+
+/* A のテキストエリア */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  padding: 0 20px;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 15px 0;
+  color: #333;
+}
+
+/* アクティブ時のスタイル */
+.faq-item.active .faq-answer {
+  max-height: 150px; /* 必要に応じて高さを調整 */
+}
+
+.faq-item.active .faq-question .icon {
+  color: #ffaf3d;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer p:first-child {
+  color: #ffaf3d;
+  font-weight: bold;
+}
 
 
 
