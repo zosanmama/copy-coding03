@@ -435,10 +435,10 @@ header {
   background-color: #fff;
   overflow: hidden; /* はみ出し部分の隠し */
   position:relative;
-  height: 650px;
+  height: 700px;
   border: solid  #cdcbcb 0.1px;
   border-radius: 50px;
-  box-shadow: 1px 1px 2px #b3b2b2;
+  box-shadow: 1px 1px 2px #dedddd;
 }
 
 .works h1 {
@@ -490,7 +490,7 @@ margin-left: 10%;
   margin-right: 20px;
   padding: .9em 2em;
   border: 1px #555555;
-  box-shadow: 1px 1px 2px #9c9c9c;
+  box-shadow: 1px 1px 2px #dcdcdc;
   border-radius: 15px;
   background-color: transparent;
   color: #f7b560;
@@ -529,10 +529,13 @@ margin-left: 10%;
 }
 
 .faq h1 {
-  font-size: 2rem;
   margin-bottom: 20px;
-  color: #6fa156;
-  text-decoration: underline;
+  font-size: xx-large;
+  color: #555555;
+  background-image: url(/img/title-line.svg);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .faq-item {
@@ -594,6 +597,21 @@ margin-left: 10%;
   border-bottom-right-radius: 40px;
 }
 
+.faq-item.active::before {
+  height: 80px; /* 上部左枠の高さ変更 */
+}
+
+.faq-item.active::after {
+  height: 80px; /* 上部右枠の高さ変更 */
+}
+
+.faq-item.active .bottom-left {
+  height: 80px; /* 下部左枠の高さ変更 */
+}
+
+.faq-item.active .bottom-right {
+  height: 80px; /* 下部右枠の高さ変更 */
+}
 
 
 /* 各FAQアイテムのスタイル */
@@ -665,6 +683,7 @@ margin-left: 10%;
   color: #555555;
   text-align: left;
 }
+
 
 /* A のテキストエリア */
 .faq-answer {
