@@ -641,21 +641,29 @@ margin-left: 10%;
 .faq-question {
   width: 100%;
   padding: 15px 20px;
-  text-align: left;
   font-size: 1.2rem;
-  font-weight: bold;
-  color: #6fa156;
   background-color: transparent;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .faq-question .icon {
   font-size: 1.5rem;
   color: #6fa156;
+}
+
+.faq-question .QorA {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #86c368;
+}
+
+.Q {
+  font-weight: bold;
+  color: #555555;
+  text-align: left;
 }
 
 /* A のテキストエリア */
@@ -679,7 +687,10 @@ margin-left: 10%;
 
 .faq-item.active .faq-question .icon {
   color: #ffaf3d;
+  /*
   transform: rotate(45deg);
+  */
+  transform: '-';
   transition: transform 0.3s ease;
 }
 
