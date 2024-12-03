@@ -525,7 +525,7 @@ margin-left: 10%;
   max-width: 800px;
   margin: auto;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .faq h1 {
@@ -598,21 +598,27 @@ margin-left: 10%;
 }
 
 .faq-item.active::before {
-  height: 80px; /* 上部左枠の高さ変更 */
+  height: 70px; /* 上部左枠の高さ変更 */
 }
 
 .faq-item.active::after {
-  height: 80px; /* 上部右枠の高さ変更 */
+  height: 70px; /* 上部右枠の高さ変更 */
 }
 
 .faq-item.active .bottom-left {
-  height: 80px; /* 下部左枠の高さ変更 */
+  height: 70px; /* 下部左枠の高さ変更 */
 }
 
 .faq-item.active .bottom-right {
-  height: 80px; /* 下部右枠の高さ変更 */
+  height: 70px; /* 下部右枠の高さ変更 */
 }
 
+.faq-item::before,
+.faq-item::after,
+.bottom-left,
+.bottom-right {
+  transition: height 0.3s ease;
+}
 
 /* 各FAQアイテムのスタイル */
 /*
