@@ -116,67 +116,70 @@
   <section class="faq">
     <h1>よくあるご質問</h1>
     
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        <span class="QorA">Q</span>
-        <span class="Q">農園の野菜や果物は有機栽培ですか？</span>
-        <span class="icon">＋</span>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <div class="faq-question">
+        <p>
+          <span class="QorA">Q</span>
+          <span class="Q">農園の野菜や果物は有機栽培ですか？</span>
+        </p>
+        <span class="icon">+</span>
         <span class="bottom-left"></span>
         <span class="bottom-right"></span>
-      </button>
+      </div>
       <div class="faq-answer">
         <span class="QorA">A</span>
-        <span>はい、私たちの農園では有機栽培の原則に従って野菜と果物を栽培しています。化学肥料や農薬を極力使用せず、土壌と作物の健康を第一に考えております。</span>
+        <span class="A">はい、私たちの農園では有機栽培の原則に従って野菜と果物を栽培しています。<br>化学肥料や農薬を極力使用せず、土壌と作物の健康を第一に考えております。</span>
       </div>
-    </div>
+    </div>    
   
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        <span class="QorA">Q</span>
-        <span>農園での見学や体験ツアーは行っていますか？</span>
-        <span class="icon">＋</span>
-        <span class="bottom-left"></span>
-        <span class="bottom-right"></span>
-      </button>
-      <div class="faq-answer">
-        <p>A はい、  腹園での見学や体験ツアーを随時開催しています。<br>
-          腹場の日常や農作業を親しみやすく説明し、実際に農園での体験を楽しむことができます。
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <div class="faq-question">
+        <p>
+          <span class="QorA">Q</span>
+          <span class="Q">農園での見学や体験ツアーは行っていますか？</span>
         </p>
-      </div>
-    </div>
-  
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        <span class="QorA">Q</span>
-        <span>オンラインで注文した農産物はどのように配送されますか？</span>
-        <span class="icon">＋</span>
+        <span class="icon">+</span>
         <span class="bottom-left"></span>
         <span class="bottom-right"></span>
-      </button>
-      <div class="faq-answer">
-        <p>A オンラインで注文いただいた農産物は、専用の梱包で新鮮さを保ったまま、指定された配送先にお届けします。</p>
       </div>
-    </div>
-  
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        <span class="QorA">Q</span>
-        <span>農園で提供される季節ごとの野菜や果物の品種は何ですか？</span>
-        <span class="icon">＋</span>
+      <div class="faq-answer">
+        <span class="QorA">A</span>
+        <span class="A">はい、  腹園での見学や体験ツアーを随時開催しています。<br>
+          腹場の日常や農作業を親しみやすく説明し、実際に農園での体験を楽しむことができます。</span>
+      </div>
+    </div>    
+
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <div class="faq-question">
+        <p>
+          <span class="QorA">Q</span>
+          <span class="Q">オンラインで注文した農産物はどのように配送されますか？</span>
+        </p>
+        <span class="icon">+</span>
         <span class="bottom-left"></span>
         <span class="bottom-right"></span>
-      </button>
-      <div class="faq-answer">
-        <p>A 春にはイチゴ、夏にはトマトや茄子、秋にはカボチャやリンゴ、冬にはプロッコリーやみかんなど、季節に応じた野菜、 果物を提供、 収穫体験することができます。</p>
       </div>
-    </div>
-  </section>
+      <div class="faq-answer">
+        <span class="QorA">A</span>
+        <span class="A">オンラインで注文いただいた農産物は、専用の梱包で新鮮さを保ったまま、指定された配送先にお届けします。</span>
+      </div>
+    </div>    
   
-
-
-
-
-
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <div class="faq-question">
+        <p>
+          <span class="QorA">Q</span>
+          <span class="Q">農園で提供される季節ごとの野菜や果物の品種は何ですか？</span>
+        </p>
+        <span class="icon">+</span>
+        <span class="bottom-left"></span>
+        <span class="bottom-right"></span>
+      </div>
+      <div class="faq-answer">
+        <span class="QorA">A</span>
+        <span class="A">春にはイチゴ、夏にはトマトや茄子、秋にはカボチャやリンゴ、冬にはプロッコリーやみかんなど、季節に応じた野菜、 果物を提供、 収穫体験することができます。</span>
+      </div>
+    </div>    
 
 
 
@@ -258,18 +261,20 @@
   </script>
   <!-- FAQ ＋クリックでの動作 -->
   <script>
-    function toggleFAQ(element) {
-      const faqItem = element.parentElement;
+    function toggleFAQ(faqItem) {
       const isActive = faqItem.classList.contains("active");
 
       // すべてのFAQアイテムを閉じる
       document.querySelectorAll(".faq-item").forEach((item) => {
         item.classList.remove("active");
+        item.querySelector(".icon").textContent = "+"; // アイコンをリセット
       });
 
       // クリックされたアイテムをトグル
       if (!isActive) {
         faqItem.classList.add("active");
+        const icon = faqItem.querySelector(".icon"); // アイコン要素を取得
+        icon.textContent = "−"; // activeのときはマイナスに
       }
     }
   </script>

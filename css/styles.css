@@ -431,11 +431,11 @@ header {
   padding: 60px 20px; /* 上下の余白調整 */
   padding-right: 0px;
   margin-right: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   background-color: #fff;
   overflow: hidden; /* はみ出し部分の隠し */
   position:relative;
-  height: 700px;
+  height: auto;
   border: solid  #cdcbcb 0.1px;
   border-radius: 50px;
   box-shadow: 1px 1px 2px #dedddd;
@@ -524,7 +524,6 @@ margin-left: 10%;
 .faq {
   max-width: 800px;
   margin: auto;
-  padding: 20px;
 }
 
 .faq h1 {
@@ -541,7 +540,6 @@ margin-left: 10%;
 .faq-item {
   position: relative;
   margin-bottom: 10px;
-  padding: 20px;
   width: 100%; /* faq-item が親要素の幅に合わせる */
   box-sizing: border-box; /* 幅の調整 */
 }
@@ -554,7 +552,7 @@ margin-left: 10%;
   top: 0;
   left: 0;
   width: 50%; /* 親要素の50% */
-  height: 40px;
+  height: 22px;
   border-top: 2px solid #6fa156;
   border-left: 2px solid #6fa156;
   border-top-left-radius: 40px;
@@ -567,7 +565,7 @@ margin-left: 10%;
   top: 0;
   right: 0;
   width: 50%; /* 親要素の50% */
-  height: 40px;
+  height: 22px;
   border-top: 2px solid #6fa156;
   border-right: 2px solid #6fa156;
   border-top-right-radius: 40px;
@@ -579,7 +577,7 @@ margin-left: 10%;
   bottom: 0;
   left: 0;
   width: 50%; /* 上半分と一致させる */
-  height: 40px;
+  height: 22px;
   border-bottom: 2px solid #6fa156;
   border-left: 2px solid #6fa156;
   border-bottom-left-radius: 40px;
@@ -591,26 +589,26 @@ margin-left: 10%;
   bottom: 0;
   right: 0;
   width: 50%; /* 上半分と一致させる */
-  height: 40px;
+  height: 22px;
   border-bottom: 2px solid #6fa156;
   border-right: 2px solid #6fa156;
   border-bottom-right-radius: 40px;
 }
 
 .faq-item.active::before {
-  height: 70px; /* 上部左枠の高さ変更 */
+  height: 60px; /* 上部左枠の高さ変更 */
 }
 
 .faq-item.active::after {
-  height: 70px; /* 上部右枠の高さ変更 */
+  height: 60px; /* 上部右枠の高さ変更 */
 }
 
 .faq-item.active .bottom-left {
-  height: 70px; /* 下部左枠の高さ変更 */
+  height: 60px; /* 下部左枠の高さ変更 */
 }
 
 .faq-item.active .bottom-right {
-  height: 70px; /* 下部右枠の高さ変更 */
+  height: 60px; /* 下部右枠の高さ変更 */
 }
 
 .faq-item::before,
@@ -620,107 +618,82 @@ margin-left: 10%;
   transition: height 0.3s ease;
 }
 
-/* 各FAQアイテムのスタイル */
-/*
-.faq-item {
-  margin-bottom: 10px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  padding: 10px;
-  position: relative;
-}
-
-
-.faq-item::before, .faq-item::after {
-  content: '';
-	width: 100%;
-	height: 30px;
-  position: absolute;
-}
-
-.faq-item::before {
-  border-radius: 20px 20px 0px 0px ;
-  border-left: solid 2px #6fa156;
-  border-top: solid 2px #6fa156;
-  border-right: solid 2px #6fa156;
-  border-bottom: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.faq-item::after {
-  border-radius: 0px 0px 20px 20px ;
-  border-right: solid 2px #6fa156;
-  border-bottom: solid 2px #6fa156;
-  border-left: solid 2px #6fa156;
-  bottom: 0;
-  right: 0;
-}
-*/
-
-/* Q ボタンのスタイル */
 .faq-question {
   width: 100%;
-  padding: 15px 20px;
-  font-size: 1.2rem;
+  padding: 10px 15px 10px 15px;
+  font-size: 0.9rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s ease; 
 }
 
-.faq-question .icon {
+.faq-question p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.QorA {
   font-size: 1.5rem;
-  color: #6fa156;
-}
-
-.faq-question .QorA {
-  font-size: 2.2rem;
   font-weight: normal;
   color: #86c368;
+  padding: 0px 20px;
+}
+
+.faq-answer .QorA {
+  color: #ffaf3d;
 }
 
 .Q {
   font-weight: bold;
   color: #555555;
+  text-align: left;
+  flex-grow: 1;
 }
 
+.faq-question .icon {
+  font-size: 2.2rem;
+  color: #6fa156;
+  padding: 0px 20px;
+}
 
 /* A のテキストエリア */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background-color: #f8f8f8;
-  padding: 0 20px;
   transition: max-height 0.3s ease;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  transition: all 0.5s ease; 
 }
 
 .faq-answer p {
-  padding: 15px 0;
-  color: #333;
+  padding: 10px 30px 10px 30px;
+  color: #dbe6f3;
+}
+
+.A {
+  width: 80%;
 }
 
 /* アクティブ時のスタイル */
+.faq-item.active .faq-question {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .faq-item.active .faq-answer {
-  max-height: 150px; /* 必要に応じて高さを調整 */
-}
-
-.faq-item.active .faq-question .icon {
-  color: #ffaf3d;
-  /*
-  transform: rotate(45deg);
-  */
-  transform: '-';
-  transition: transform 0.3s ease;
-}
-
-.faq-answer p:first-child {
-  color: #ffaf3d;
-  font-weight: bold;
+  max-height: 250px; /* 必要に応じて高さを調整 */
+  padding-bottom: 20px;
 }
 
 
