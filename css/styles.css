@@ -392,6 +392,7 @@ header {
   margin-right: 200px;
   margin-bottom: 20px;
   background-color: #fff;
+  width: 80%;
   overflow: hidden; /* はみ出し部分の隠し */
   position:relative;
   height: auto;
@@ -404,7 +405,7 @@ header {
 
 .works h1 {
   margin-top: 0px;
-  margin-left: 10%;
+  margin-left: 30%;
   margin-bottom: 10px;
   font-size: xx-large;
   color: #555555;
@@ -418,12 +419,12 @@ header {
 color:#555555;
 font-size: small;
 margin-top: 30px;
-margin-left: 10%;
+margin-left: 30%;
 }
 
 .works-button {
   margin-top: 30px;
-  margin-left: 10%;
+  margin-left: 30%;
   margin-bottom: 10px;
   display: flex;
 }
@@ -469,6 +470,7 @@ margin-left: 10%;
   width:100%;
   margin-top: 50px;
   margin-right: 0px;
+  margin-left: 10%;
 }
 .slider img {
   width: 90%;
@@ -500,7 +502,7 @@ margin-left: 10%;
 
 .faq-item {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   width: 100%; /* faq-item が親要素の幅に合わせる */
   box-sizing: border-box; /* 幅の調整 */
 }
@@ -663,6 +665,168 @@ margin-left: 10%;
               news
   ----------------------------------*/
 
+/* 全体のセクションスタイル */
+.news {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+/* 左側のスタイル */
+.news .left {
+  flex: 1;
+  width: 400px;
+  justify-items: left;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.news .left h1 {
+  font-weight: normal;
+  font-weight: bold;
+  font-size: x-large;
+  letter-spacing: 0.1em;
+  color: #555555;
+  background-image: url(/img/title-line.svg);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-bottom: 30px;
+}
+
+.news .left p {
+  width: 280px;
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.news .left div {
+  align-items: center;
+  justify-content: center;
+}
+
+.news .left button {
+  width: 200px;
+  padding: 15px 60px;
+  margin-left: 10%;
+  border: 2px solid #6bb76d;
+  background-color: white;
+  color: #6bb76d;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news .left button:hover {
+  background-color: #6bb76d;
+  color: white;
+}
+
+/* 右側のスタイル 
+.news .right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  gap: 15px;
+  width: 60%;
+  padding: 50px 20px;
+  margin-left: 20px;
+  position: relative;
+  border-radius: 80px 0px 0px 80px;
+  border: solid 0.01px rgb(228, 226, 226);
+  box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1);
+}
+
+.news .news-item {
+  display: flex;
+  padding: 10px 15px;
+}
+
+.news .news-item .upper {
+  align-items: center;
+}
+
+.news .news-item .upper .date {
+  font-size: 12px;
+  color: #999;
+  margin-right: 10px;
+}
+
+.news .news-item .upper .category {
+  font-size: 12px;
+  color: white;
+  background-color: #6bb76d;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.news .news-item .lower .title {
+  font-size: 14px;
+  color: #333;
+}
+*/
+
+/* 右側全体のスタイル */
+.news .right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  gap: 15px;
+  padding: 50px 10px 50px 25px;
+  padding-left: 60px;
+  margin-left: 50px;
+  margin-right: -80px;
+  border-radius: 80px 0px 0px 80px;
+  border: solid 0.01px rgb(228, 226, 226);
+  box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1);
+}
+
+/* 各ニュースアイテム */
+.news-item {
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+/* 上段 (date と category) */
+.news-item .upper {
+  display: flex; /* 横並びにする */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px; /* 下に余白を設定 */
+}
+
+.news-item .date {
+  font-size: 11px; /* 日付の文字サイズ */
+  color: #888; /* 薄いグレー */
+}
+
+.news-item .category {
+  font-size: 10px; /* カテゴリの文字サイズ */
+  color: #fff; /* 白色 */
+  background: #79c77b; /* 背景色（緑系） */
+  border-radius: 5px; /* 角丸 */
+  padding: 2px 15px; /* 内側の余白 */
+}
+
+/* 下段 (タイトル) */
+.news-item .lower {
+  font-size: 12px; /* タイトルの文字サイズ */
+  color: #545353; /* 濃い文字色 */
+  letter-spacing: 0.1em;
+}
+
+.news-item .lower .title {
+  line-height: 1.6; /* 行間を広げる */
+  font-weight: bold; /* 太字にする */
+}
 
 
   /* ---------------------------------
