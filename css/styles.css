@@ -155,49 +155,6 @@ header {
     }
 }
 
-/* news-box 
-.fv-news {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    background-color: #ffaf3d;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    opacity: 0;
-    transform: translateY(20px);
-    /*transition: opacity 1s ease, transform 1s ease;*/
-  
-
-/* フェードイン 
-.fv-fade-in {
-  /* opacity: 1;
-  transform: translateY(0);
-  animation: fadeIn 0.8s forwards;
-}
-
-/* フェードアウト 
-.fade-out {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-
-.fv-news h3 {
-    margin-bottom: 10px;
-    text-align: left;
-}
-.fv-news h4 {
-  margin-bottom: 10px;
-  text-align: left;
-}
-.fv-news p {
-    text-align: left;
-    margin-bottom: 5px;
-}
-*/
-
 .fv-news {
   position: fixed; /* 画面に固定 */
   bottom: 40px;
@@ -228,13 +185,14 @@ header {
               about
   ----------------------------------*/
   .about {
-    padding: 60px 20px;
+    padding: 0px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: #fff;
     position: relative;
+    margin-bottom: 0px;
   }
   
   /* About Text */
@@ -427,18 +385,21 @@ header {
             works
 ----------------------------------*/
 .works {
+  margin-top: 0px;
   margin-left: -50px; /*左にはみ出す */
   padding: 60px 20px; /* 上下の余白調整 */
   padding-right: 0px;
   margin-right: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background-color: #fff;
   overflow: hidden; /* はみ出し部分の隠し */
   position:relative;
   height: auto;
+  /*
   border: solid  #cdcbcb 0.1px;
+  */
   border-radius: 50px;
-  box-shadow: 1px 1px 2px #dedddd;
+  box-shadow: 1px 1px 5px #e0dfdf;
 }
 
 .works h1 {
