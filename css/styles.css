@@ -833,6 +833,57 @@ margin-left: 30%;
               access
   ----------------------------------*/
 
+  .access h1 {
+    font-weight: normal;
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 0.1em;
+    color: #555555;
+    background-image: url(/img/title-line.svg);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-bottom: 30px;
+  }
+  
+/* 全体のレイアウト */
+.access .container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 左側の情報 */
+.access .info {
+  flex: 1;
+  background: #79c77b;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.access .info p {
+  margin-bottom: 15px;
+}
+
+.access .info a.map-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 右側のマップ */
+.access .map {
+  flex: 2;
+  height: 250px; /* マップの高さを調整 */
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 
 
