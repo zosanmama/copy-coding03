@@ -832,6 +832,9 @@ margin-left: 30%;
   /* ---------------------------------
               access
   ----------------------------------*/
+  .access {
+
+  }
 
   .access h1 {
     font-weight: normal;
@@ -849,48 +852,91 @@ margin-left: 30%;
 /* 全体のレイアウト */
 .access .container {
   display: flex;
-  gap: 20px;
   align-items: flex-start;
+  /*
   padding: 20px;
-  background: #f9f9f9;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  */
 }
 
 /* 左側の情報 */
 .access .info {
   flex: 1;
-  background: #79c77b;
-  color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  font-size: 14px;
-  line-height: 1.8;
+  background: linear-gradient(to right, #93C572 0%, #93C572 20%, white 20%, white 100%);
+  color: black;
+  border-radius: 100px;
 }
 
-.access .info p {
+.access dl {
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+/* dl の各行を横並びに */
+.access .info .row {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
 }
 
+.access .info .row:first-child{
+  margin-top: 40px;
+}
+
+.access .info .row:last-child {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+
+/* dt のスタイル */
+.access .info dt {
+  flex-basis: 150px; /* 固定幅 */
+  font-size: medium;
+  font-weight: bold;
+  padding-left: 40px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+/* dd のスタイル */
+.access .info dd {
+  flex: 1;
+  padding-left: 40px;
+  line-height: 1.8;
+}
+
+.access .info .row:last-child dd {
+  padding-left: 0px;
+}
+
+/* iframe スタイル */
+.access .info dd iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 0px;
+  border: none;
+  margin-top: 10px;
+  vertical-align: bottom;
+}
+
+/* 地図リンク */
 .access .info a.map-link {
-  color: #fff;
+  font-size: small;
+  color: grey;
   text-decoration: underline;
+  display: block;
+  margin-top: 10px;
 }
-
-/* 右側のマップ */
-.access .map {
-  flex: 2;
-  height: 250px; /* マップの高さを調整 */
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 
 
   /* ---------------------------------
               contact
   ----------------------------------*/
-
+.contact {
+  padding: 50px;
+}
 
 
   /* ---------------------------------
