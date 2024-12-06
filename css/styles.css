@@ -933,15 +933,90 @@ margin-left: 30%;
   margin-top: 10px;
 }
 
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .access .info dt,
+  .access .info dd {
+    font-size: small;
+  }
+  .access .info dd iframe {
+    height: 200px;
+  }
+}
 
   /* ---------------------------------
               contact
   ----------------------------------*/
-.contact {
-  padding: 50px;
-}
+  .contact {
+    background-color: #F9AC55; /* オレンジ色の背景 */
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    margin: 150px auto; /* 中央揃え */
+  }
+  
+  .contact h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .contact p {
+    font-size: 0.7rem;
+    font-weight: lighter;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 12px 55px;
+    background-color: white;
+    color: #67B468; /* 緑色の文字 */
+    font-size: 0.7rem;
+    font-weight: lighter;
+    border-radius: 30px;
+    border: solid 1px  #67B468;
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contact-button:hover {
+    background-color: #67B468;
+    color: white;
+  }
+  
+  .contact-phone {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: white;
+  }
+  
+  .contact-phone strong {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #FFFFFF;
+  }
+  
+  .contact-phone span {
+    display: block;
+    margin-top: 0px;
+    font-size: 0.9rem;
+    color: #FFF3E0;
+  }
+  
 
 
   /* ---------------------------------
               footer
   ----------------------------------*/
+.footer {
+  margin-top: 60px;
+}
+  
