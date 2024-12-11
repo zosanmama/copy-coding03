@@ -833,11 +833,18 @@ margin-left: 30%;
               access
   ----------------------------------*/
 
+  .access{
+    width: 800px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .access h1 {
     font-weight: normal;
     font-weight: bold;
     font-size: x-large;
     letter-spacing: 0.1em;
+    text-align: center;
     color: #555555;
     background-image: url(/img/title-line.svg);
     background-size: 15%;
@@ -1020,6 +1027,8 @@ margin-left: 30%;
             Footer
 ---------------------------------- */
 .footer {
+  width: 800px;
+  margin: 10px auto;
   background-color: #F9F9F9;
   height: 300px;
   padding: 40px 20px;
@@ -1055,7 +1064,7 @@ margin-left: 30%;
 .footer-right {
   flex: 1;
   min-width: 500px;
-  text-align: right;
+  justify-items: left;
 }
 
 .footer-nav a {
@@ -1071,19 +1080,38 @@ margin-left: 30%;
 }
 
 .footer-right .social-icons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 100px;
-  margin-bottom: 10px;
+  display: inline-flex;
+  gap: 15px;
+  margin-top: 60px;
+  margin-left: 280%;
 }
 
 .footer-right .social-icons img {
   width: 30px;
-  height: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  overflow: visible;
+  background-color: #fff; /* 背景色を白に設定 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+}
+
+/* ホバー時の効果 */
+.footer-right .social-icons img:hover {
+  transform: translateY(-2px); /* 少し持ち上げる */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .footer-right p {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #999;
+  margin-top: 20px ;
+}
+
+.footer-copyright {
+  font-size: 0.7rem;
+  color: #999;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 10px;
 }
